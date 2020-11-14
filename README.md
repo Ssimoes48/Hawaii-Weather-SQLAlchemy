@@ -1,4 +1,4 @@
-# SQLAlchemy: Surfs Up!
+# SQL-Alchemy: Surfs Up!
 
 ![surfer](Images/surfs-up.png)
 
@@ -15,27 +15,40 @@
 * [Contact](#contact)
 
 ## General info
-Add more general information about project. What the purpose of the project is? Motivation?
 
 ## Climate Analysis
-![Example screenshot](./img/screenshot.png)
 
 ## Precipitation Analysis
 
+![line chart](Images/precp_line.PNG)
+
+![summary statistics](Images/sum_stats.PNG)
 
 ## Station Analysis
-Describe how to install / setup your local environement / add link to demo version.
+
+![query date](Images/query_date.PNG)
+
+![temp histogram](Images/temp_hist.PNG)
 
 ## Climate App
-Show examples of usage:
-`put-your-code-here`
+
+![web site url](Images/web_site_route.PNG)
+
+![web site precp](Images/web_precp.PNG)
+
+![web site stations](Images/web_stations.PNG)
+
+![web site tobs](Images/web_tobs.PNG)
 
 ## Conclusion
-Add here credits. Project inspired by..., based on...
 
 ## Resources 
-Link to [Jupyter Notebook](****) 
-Link to [app.py](***)
+
+Link to [Jupyter Notebook]( https://github.com/Ssimoes48/SQLAlchemy_Challenge/blob/main/sara_climate.ipynb) 
+
+Link to [app.py]( https://github.com/Ssimoes48/SQLAlchemy_Challenge/blob/main/app.py)
+
 
 ## Contact
+
 [Sara Simoes](SSimoes48.github.io)
