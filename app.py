@@ -102,7 +102,7 @@ def start_end():
     start_date = "2016, 08, 23"
 
     temp_summary = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.count(Measurement.tobs), func.avg(Measurement.tobs)).\
-        filter(Measurement.date >= start_date).all()
+        filter(Measurement.date >= start_date).group_by(Measurement.date).all()
 
     return jsonify(temp_summary)
 
