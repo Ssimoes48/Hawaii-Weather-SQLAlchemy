@@ -93,9 +93,18 @@ def tobs():
     return jsonify(active_station_list)
 
 
-# @app.route("api/v1.0/<start>/<end>")
+@app.route("/api/v1.0/start_end")
+def start_end():
 
+    session = Session(engine)
 
+    end_date = "2017, 8, 23"
+    start_date = "2016, 08, 23"
+
+    temp_summary = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.count(Measurement.tobs), func.avg(Measurement.tobs)).\
+        filter(Measurement.date >= start_date).all()
+
+    return jsonify(temp_summary)
 
 if __name__ == '__main__':
     app.run(debug=True)
