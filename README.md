@@ -51,4 +51,4 @@ Link to [app.py]( https://github.com/Ssimoes48/SQLAlchemy_Challenge/blob/main/ap
 
 ## Contact
 
-[Sara Simoes](SSimoes48.github.io)
+[Sara Simoes](https://ssimoes48.github.io/)
