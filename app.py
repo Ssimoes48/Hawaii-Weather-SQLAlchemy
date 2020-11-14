@@ -37,10 +37,11 @@ def welcome():
     """List all available api routes."""
     return (
         f"Available Routes:<br/>"
-        f"/api/v1.0/precipitation"
-        f"/api/v1.0/stations"
-        f"/api/v1.0/tobs"
-        f"/api/v1.0/<start>/<end>"
+        f"/api/v1.0/precipitation<br/>"
+        f"/api/v1.0/stations<br/>"
+        f"/api/v1.0/tobs<br/>"
+        f"/api/v1.0/start<br/>"
+        f"/api/v1.0/start/end<br/>"
     )
 
 
@@ -68,7 +69,9 @@ def station():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    station_list = session.query((Station.station)).all()
+    stations = session.query((Station.station)).all()
+
+    station_list = list(np.ravel(stations))
 
     session.close()
 
@@ -93,16 +96,31 @@ def tobs():
     return jsonify(active_station_list)
 
 
-@app.route("/api/v1.0/start_end")
-def start_end():
+@app.route("/api/v1.0/<start>")
+def start_temp(start):
 
     session = Session(engine)
 
-    end_date = "2017, 8, 23"
-    start_date = "2016, 08, 23"
+    temp_summary = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
+        filter(Measurement.date >= start).all()
 
-    temp_summary = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.count(Measurement.tobs), func.avg(Measurement.tobs)).\
-        filter(Measurement.date >= start_date).group_by(Measurement.date).all()
+    temp_list = list(np.ravel(temp_summary))
+
+    session.close()
+
+    return jsonify(temp_summary)
+
+@app.route("/api/v1.0/<start>/<end>")
+def start_end(start, end):
+
+    session = Session(engine)
+
+    temp_summary = session.query(func.min(Measurement.tobs), func.max(Measurement.tobs), func.avg(Measurement.tobs)).\
+        filter(Measurement.date >= start).filter(Measurement.date <= end).all()
+
+    temp_list = list(np.ravel(temp_summary))
+
+    session.close()
 
     return jsonify(temp_summary)
 
