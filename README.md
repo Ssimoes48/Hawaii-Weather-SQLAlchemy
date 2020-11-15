@@ -119,6 +119,8 @@ I then created a query that returns the minimum temperature, the average tempera
 
 ## Conclusion
 
+Based on the precipitation analysis, the best time to visit Hawaii is in the early Fall or around the Christmas holiday. 
+
 ## Resources 
 
 Link to [Jupyter Notebook]( https://github.com/Ssimoes48/SQLAlchemy_Challenge/blob/main/sara_climate.ipynb) 
