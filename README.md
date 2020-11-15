@@ -98,7 +98,7 @@ For a list of stations, I used the below query and used `station_list = list(np.
 
 ![stations](Images/station_route.PNG)
 
-![web site stations](Images/web_stations.PNG)
+![web site stations](Images/web_station.PNG)
 
 For my temperature observation query, I used the below code and again turned my results into a list using a For loop to return a `JSON` list. 
 
