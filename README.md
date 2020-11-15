@@ -75,13 +75,47 @@ For the most active station, I created a histogram to show the temperature obser
 
 ## Climate App
 
+I used `FLASK` to create a Weather App website that would display my data queries and interact with the user to return data searches. 
+To set up my app I use the below code in Visual Studio Basic
+
+![flask code](Images/flask_setup.PNG)
+
+I then created my routes: 
+
+![routes](Images/routes.PNG)
+
+When running my app in terminal, I get the below results on the internet. This shows my main page and the routes available. 
+
 ![web site url](Images/web_site_route.PNG)
+
+For my precipitation route, I used the below code and turned my query results into a list so I could return a `JSON` list.
+
+![precp route](Images/precp_route.PNG)
 
 ![web site precp](Images/web_precp.PNG)
 
+For a list of stations, I used the below query and used `station_list = list(np.ravel(stations)) ` to make my results into a list to show `JSON` 
+
+![stations](Images/station_route.PNG)
+
 ![web site stations](Images/web_stations.PNG)
 
+For my temperature observation query, I used the below code and again turned my results into a list using a For loop to return a `JSON` list. 
+
+![tobs](Images/tobs_route.PNG)
+
 ![web site tobs](Images/web_tobs.PNG)
+
+I then created a query that returns the minimum temperature, the average temperature, and the max temperature for a given start or start-end range. This search is interactive, and you have to enter the date in the URL line. The results are returned as a `JSON` dictionary. 
+
+![start](Images/start_route.PNG)
+
+![start web](Images/web_temp_start.PNG)
+
+![start end](Images/start_end_route.PNG)
+
+![start end web](Images/web_temp_start_end.PNG)
+
 
 ## Conclusion
 
