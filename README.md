@@ -5,13 +5,19 @@
 I am so excited to be planning a long holiday vacation to Honolulu in Hawaii! In order to determine the perfect time of year to visit Hawaii, I am going to analyze the climate data over the last year. I will use a SQLAlchemy ORM Requests, Pandas and Matplotlib to complete my analysis.
 
 ## Table of contents
-* [Climate Analysis](#climate_analysis)
-* [Precipitation Analysis](#precipitation_analysis)
-* [Station Analysis](#station_analysis)
-* [Climate App](#climate_app)
+* [Technologies](#technologies)
+* [Climate Analysis](#climate-analysis)
+* [Precipitation Analysis](#precipitation-analysis)
+* [Station Analysis](#station-analysis)
+* [Climate App](#climate-app)
 * [Conclusion](#conclusion)
 * [Resources](#resources)
 * [Contact](#contact)
+
+## Technologies
+* Python- Pandas
+* Matplotlib
+* SQLAlchemy
 
 ## Climate Analysis
 
