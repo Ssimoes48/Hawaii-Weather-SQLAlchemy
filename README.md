@@ -1,4 +1,4 @@
-# SQL-Alchemy: Surfs Up!
+# Hawaii Weather SQL-Alchemy: Surfs Up!
 
 ![surfer](Images/surfs-up.png)
 
